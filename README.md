@@ -1,4 +1,6 @@
-By default this custom `NGINX` docker image behave like a regular stock NGINX image. However, it can be customized in a couple of ways:
+By default this custom `NGINX` docker image behave like a regular stock NGINX image. However, it also supports a few customizations if and when needed. 
+
+The customizations supported are:
 
 - if the `INDEX_HTML_CONTENT` system variable is passed to the container, the image will replace the `index.html` file with the content of the variable
 - if the `HTTP_PORT` system variable is passed to the container, the image will configure the `/etc/nginx/conf.d/default.conf` to listen on the port specified in the variable 
@@ -17,4 +19,4 @@ The command below runs a stock nginx image replacing the default `index.html` fi
 docker run --rm -d -e INDEX_HTML_CONTENT="My custom web site" -e HTTP_PORT=8080 -p 8080:8080 mreferre/nginx-custom-site:latest
 ```
 
-The two variables can be used independently. 
+The variables can be used independently. 
