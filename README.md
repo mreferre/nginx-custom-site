@@ -9,7 +9,7 @@ The additional packages included are:
 
 - curl (this is useful to facilitate live debugging or facilitating the creation of containers health checks e.g. `curl -f http://localhost/ || exit 1` from within the container)
 
-A docker image is already available on Docker Hub as `mreferre\nginx-custom-site`. 
+A docker image is already available on Docker Hub as `mreferre/nginx-custom-site`. 
 
 ####Usage 
 
