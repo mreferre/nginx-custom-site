@@ -2,14 +2,14 @@ By default this custom `NGINX` docker image behave like a regular stock NGINX im
 
 The customizations supported are:
 
-- if the `INDEX_HTML_CONTENT` system variable is passed to the container, the image will replace the `index.html` file with the content of the variable
+- if the `INDEX_HTML_CONTENT` system variable is passed to the container, the image will replace the `index.html` file with the content of the variable and turning the body style to `lightblue`
 - if the `HTTP_PORT` system variable is passed to the container, the image will configure the `/etc/nginx/conf.d/default.conf` to listen on the port specified in the variable 
 
 The additional packages included are:
 
 - curl (this is useful to facilitate live debugging or facilitating the creation of containers health checks e.g. `curl -f http://localhost/ || exit 1` from within the container)
 
-A docker image is already available on the docker hub as `mreferre\nginx-custom-site`. 
+A docker image is already available on Docker Hub as `mreferre\nginx-custom-site`. 
 
 ####Usage 
 
